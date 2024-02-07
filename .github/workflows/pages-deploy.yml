@@ -61,6 +61,11 @@ jobs:
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 20    
+
   deploy:
     environment:
       name: github-pages
